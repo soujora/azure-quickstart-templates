@@ -17,6 +17,7 @@
     "adVMSize": {
       "type": "string",
       "allowedValues": [
+        "Standard_D2s_v3",
         "Standard_D1_v2",
         "Standard_D2_v2",
         "Standard_D3_v2",
@@ -63,11 +64,12 @@
       "metadata": {
         "description": "The size of the AD VMs Created"
       },
-      "defaultValue": "Standard_D1"
+      "defaultValue": "Standard_D2s_v3"
     },
     "sqlVMSize": {
       "type": "string",
       "allowedValues": [
+        "Standard_D8s_v3",
         "Standard_DS1",
         "Standard_DS2",
         "Standard_DS3",
@@ -96,11 +98,12 @@
       "metadata": {
         "description": "The size of the SQL VMs Created"
       },
-      "defaultValue": "Standard_DS4"
+      "defaultValue": "Standard_D2s_v3"
     },
     "witnessVMSize": {
       "type": "string",
       "allowedValues": [
+        "Standard_D2s_v3",
         "Standard_DS1",
         "Standard_DS2",
         "Standard_DS3",
@@ -129,14 +132,14 @@
       "metadata": {
         "description": "The size of the Witness VM Created"
       },
-      "defaultValue": "Standard_DS1"
+      "defaultValue": "Standard_D2s_v3"
     },
     "domainName": {
       "type": "string",
       "metadata": {
         "description": "The FQDN of the AD Domain created "
       },
-      "defaultValue": "contoso.local"
+      "defaultValue": "gslee.local"
     },
     "sqlServerServiceAccountUserName": {
       "type": "string",
@@ -160,12 +163,12 @@
     "sqlStorageAccountType": {
       "type": "string",
       "allowedValues": [
-        "Premium_LRS"
+        "Standard_LRS"
       ],
       "metadata": {
         "description": "The type of the Sql Server Storage Account created"
       },
-      "defaultValue": "Premium_LRS"
+      "defaultValue": "Standard_LRS"
     },
     "dcStorageAccountName": {
       "type": "string",
@@ -191,42 +194,42 @@
       "metadata": {
         "description": "The address range of the new VNET in CIDR format"
       },
-      "defaultValue": "10.0.0.0/16"
+      "defaultValue": "10.110.0.0/16"
     },
     "staticSubnet": {
       "type": "string",
       "metadata": {
         "description": "The address range of the subnet static IPs are allocated from in the new VNET"
       },
-      "defaultValue": "10.0.0.0/24"
+      "defaultValue": "10.110.0.0/24"
     },
     "sqlSubnet": {
       "type": "string",
       "metadata": {
         "description": "The address range of the SQL subnet created in the new VNET"
       },
-      "defaultValue": "10.0.1.0/26"
+      "defaultValue": "10.110.1.0/26"
     },
     "adPDCNICIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The IP address of the new AD VM"
       },
-      "defaultValue": "10.0.0.4"
+      "defaultValue": "10.110.0.4"
     },
     "adBDCNICIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The IP address of the new backup AD VM"
       },
-      "defaultValue": "10.0.0.5"
+      "defaultValue": "10.110.0.5"
     },
     "sqlLBIPAddress": {
       "type": "string",
       "metadata": {
         "description": "The IP address of the new SQL Server Internal Load Balancer"
       },
-      "defaultValue": "10.0.1.9"
+      "defaultValue": "10.110.1.9"
     },
     "deploymentPrefix": {
       "type": "string",
@@ -247,14 +250,14 @@
       "metadata": {
         "description": "Linked Templates base url"
       },
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sqlvm-alwayson-cluster/nested"
+      "defaultValue": "https://raw.githubusercontent.com/soujora/azure-quickstart-templates/master/sqlvm-alwayson-cluster/nested"
     },
     "scriptsBaseUrl": {
       "type": "string",
       "metadata": {
         "description": "DSC Scripts base url"
       },
-      "defaultValue": "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/sqlvm-alwayson-cluster/scripts"
+      "defaultValue": "https://raw.githubusercontent.com/soujora/azure-quickstart-templates/master/sqlvm-alwayson-cluster/scripts"
     },
     "autoPatchingDay": {
       "type": "string",
@@ -312,7 +315,7 @@
       "metadata": {
         "description": "The Sql AlwaysOn Group Name"
       },
-      "defaultValue": "alwayson-ag"
+      "defaultValue": "gs-alwayson-ag"
     },
     "sqlAOListenerPort": {
       "type": "string",
@@ -326,7 +329,7 @@
       "metadata": {
         "description": "The Sql AG Listener Name"
       },
-      "defaultValue": "alwayson-ag-listener"
+      "defaultValue": "gs-alwayson-ag-listener"
     },
     "sqlServerVersion": {
       "type": "string",
@@ -338,7 +341,7 @@
       "metadata": {
         "description": "The Sql Server Version"
       },
-      "defaultValue": "SQL2014SP1-WS2012R2"
+      "defaultValue": "SQL2016-WS2012R2"
     },
     "numberOfSqlVMDisks": {
       "type": "string",
