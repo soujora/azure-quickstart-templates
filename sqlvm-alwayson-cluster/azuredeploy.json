@@ -443,7 +443,7 @@
     "SQL2014-WS2012R2": "Enterprise",
     "SQL2014SP1-WS2012R2": "Enterprise",
     "SQL2016-WS2012R2": "Enterprise",
-    "SQL2016SP2-WS2016": "Enterprise"
+    "SQL2016SP2-WS2016": "Enterprise",
     "Monday": true,
     "Tuesday": true,
     "Wednesday": true,
