@@ -336,12 +336,13 @@
       "allowedValues": [
         "SQL2012SP3-WS2012R2",
         "SQL2014SP1-WS2012R2",
-        "SQL2016SP1-WS2012R2"
+        "SQL2016SP1-WS2012R2",
+        "SQL2016SP2-WS2016"
       ],
       "metadata": {
         "description": "The Sql Server Version"
       },
-      "defaultValue": "SQL2016SP1-WS2012R2"
+      "defaultValue": "SQL2016SP2-WS2016"
     },
     "numberOfSqlVMDisks": {
       "type": "string",
@@ -442,6 +443,7 @@
     "SQL2014-WS2012R2": "Enterprise",
     "SQL2014SP1-WS2012R2": "Enterprise",
     "SQL2016-WS2012R2": "Enterprise",
+    "SQL2016SP2-WS2016": "Enterprise"
     "Monday": true,
     "Tuesday": true,
     "Wednesday": true,
